@@ -14,7 +14,7 @@ public class ObjectRedisController {
 	@Autowired
 	PersonDao personDao;
 	@RequestMapping("/setPerson")
-	public void set(String id,String name,Integer age){
+	public void set(Long id,String name,Integer age){
 		logger.debug("访问setPersion:id={},name={},age={}",id,name,age);
 		Person person=new Person(id,name,age);
 		personDao.save(person);
